@@ -4,12 +4,16 @@
     <tr>
       <th>ID</th>
       <th>Description</th>
+      <th>Target Date</th>
+      <th>is Completed</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor='let todo of todos; let i = index'>
-      <td>{{todo.id}}</td>
+      <td>{{i}}</td>
       <td>{{todo.desc}}</td>
+      <td>{{todo.targetDate | date}}</td>
+      <td>{{todo.isDone}}</td>
     </tr>
   </tbody>
 </table>
